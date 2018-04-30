@@ -3,8 +3,11 @@
 #include "IConsumerStage.h"
 
 
-namespace CommonTools_Native { namespace Parallel {
+namespace Tools { namespace Parallel {
 
+	/*
+	 * Represents an object that can be connected to an IConsumer.
+	 */
 	template<class T>
 	class IConnectable
 	{

@@ -4,14 +4,15 @@
 #include "..\PipelineStage.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
-using namespace CommonTools_Native::Parallel;
+using namespace Tools::Parallel;
+using namespace Fake;
 using namespace std;
 
 const int c_anyStageId = 1;
 int s_anyInput = 20;
 
 
-namespace CommonTools_NativeTests
+namespace Test
 {
 	TEST_CLASS(PipelineStageUnitTests)
 	{

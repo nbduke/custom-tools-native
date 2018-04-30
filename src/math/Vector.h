@@ -7,8 +7,11 @@
 #include <string>
 
 
-namespace CommonTools_Native { namespace Math {
+namespace Tools { namespace Math {
 
+	/*
+	 * Represents a vector in DIM-dimensional space.
+	 */
 	template <unsigned int DIM>
 	class Vector
 	{

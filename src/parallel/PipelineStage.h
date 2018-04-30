@@ -1,10 +1,3 @@
-/*
- * PipelineStage.h
- * 
- * PipelineStage is a concurrent data structure ideal for constructing
- * a data pipeline. Each PipelineStage is templated on an input and
- * output type and represents one stage of execution in the pipeline.
-*/
 #pragma once
 
 #include "PipelineStageBase.h"
@@ -14,10 +7,15 @@
 #include <map>
 
 
-namespace CommonTools_Native { namespace Parallel {
+namespace Tools { namespace Parallel {
 
 #pragma region PipelineStage<Input, Output>
 
+	/*
+	 * PipelineStage is a concurrent data structure ideal for constructing
+	 * a data pipeline. Each PipelineStage is templated on an input and
+	 * output type and represents one stage of execution in the pipeline.
+	 */
 	template<class Input, class Output>
 	class PipelineStage
 		: public PipelineStageBase<Input>
@@ -71,6 +69,10 @@ namespace CommonTools_Native { namespace Parallel {
 
 #pragma region PipelineStage<Input, void>
 
+	/*
+	 * Partial template specialization of PipelineStage with a void output type.
+	 * This is known as a final pipeline stage.
+	 */
 	template<class Input>
 	class PipelineStage<Input, void> : public PipelineStageBase<Input>
 	{

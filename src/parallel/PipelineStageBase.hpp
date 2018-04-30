@@ -1,8 +1,4 @@
-/*
-* PipelineStageBase.hpp
-*/
-
-namespace CommonTools_Native { namespace Parallel {
+namespace Tools { namespace Parallel {
 
 	const unsigned int c_waitMilliseconds = 10;
 

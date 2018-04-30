@@ -1,7 +1,11 @@
 #pragma once
 
-namespace CommonTools_Native { namespace Math {
+namespace Tools { namespace Math {
 
+	/*
+	 * Represents a rational number by storing the numerator
+	 * and denominator.
+	 */
 	class Rational
 	{
 	public:

@@ -3,10 +3,10 @@
 #include "..\..\IConsumerStage.h"
 
 
-namespace CommonTools_NativeTests
+namespace Fake
 {
 	template<class Input>
-	class FakeConsumerStage : public CommonTools_Native::Parallel::IConsumerStage<Input>
+	class FakeConsumerStage : public Tools::Parallel::IConsumerStage<Input>
 	{
 	public:
 		FakeConsumerStage(int stageId)

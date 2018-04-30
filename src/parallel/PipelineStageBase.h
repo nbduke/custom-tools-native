@@ -1,10 +1,3 @@
-/*
-* PipelineStageBase.h
-*
-* PipelineStageBase is the base class of every template instantiation of
-* PipelineStage. It encapsulates most of the core logic and functionality
-* of a pipeline stage.
-*/
 #pragma once
 
 #include "IConsumerStage.h"
@@ -13,8 +6,13 @@
 #include <concurrent_queue.h>
 
 
-namespace CommonTools_Native { namespace Parallel {
+namespace Tools { namespace Parallel {
 
+	/*
+	 * PipelineStageBase is the base class of every template instantiation of
+	 * PipelineStage. It encapsulates most of the core logic and functionality
+	 * of a pipeline stage.
+	 */
 	template<class Input>
 	class PipelineStageBase : public IConsumerStage<Input>
 	{
