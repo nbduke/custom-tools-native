@@ -3,8 +3,11 @@
 #include "IPipelineStage.h"
 
 
-namespace CommonTools_Native { namespace Parallel {
+namespace Tools { namespace Parallel {
 
+	/*
+	 * Represents a pipeline stage that can consume input.
+	 */
 	template<class T>
 	class IConsumerStage : public IPipelineStage
 	{

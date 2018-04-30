@@ -3,7 +3,7 @@
 #include "..\Rational.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
-using namespace CommonTools_Native::Math;
+using namespace Tools::Math;
 
 using namespace std;
 
@@ -11,7 +11,7 @@ const int c_anyPrime = 5;
 const int c_anyLargerPrime = 11;
 
 
-namespace CommonTools_NativeTests
+namespace Test
 {
 	TEST_CLASS(RationalUnitTests)
 	{

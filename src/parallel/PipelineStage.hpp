@@ -1,10 +1,4 @@
-/*
-* PipelineStage.hpp
-*
-* Defines the PipelineStage<Input, Output> class.
-*/
-
-namespace CommonTools_Native { namespace Parallel {
+namespace Tools { namespace Parallel {
 
 	template<class Input, class Output>
 	PipelineStage<Input, Output>::PipelineStage(

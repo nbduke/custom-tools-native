@@ -8,7 +8,7 @@
 using namespace std;
 
 
-namespace CommonTools_Native { namespace Math {
+namespace Tools { namespace Math {
 
 	Rational::Rational()
 		: Rational(0)

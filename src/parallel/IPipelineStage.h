@@ -3,8 +3,11 @@
 #include <ppltasks.h>
 
 
-namespace CommonTools_Native { namespace Parallel {
+namespace Tools { namespace Parallel {
 
+	/*
+	 * Represents a single stage in a parallel pipeline.
+	 */
 	class IPipelineStage
 	{
 	public:

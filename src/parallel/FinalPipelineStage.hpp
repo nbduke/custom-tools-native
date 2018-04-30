@@ -1,10 +1,4 @@
-/*
-* FinalPipelineStage.hpp
-*
-* Defines the PipelineStage<Input, void> class.
-*/
-
-namespace CommonTools_Native { namespace Parallel {
+namespace Tools { namespace Parallel {
 
 	template<class Input>
 	PipelineStage<Input, void>::PipelineStage(

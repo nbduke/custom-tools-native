@@ -4,17 +4,16 @@
 #include <iostream>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
-using namespace CommonTools_Native::Parallel;
+using namespace Tools::Parallel;
 using namespace std;
 
-namespace CommonTools_NativeTests
+namespace Test
 {
 	const int c_iterations = 1000;
 
 	TEST_CLASS(PipelineComponentTests)
 	{
 	public:
-
 		TEST_METHOD(TestPipeline)
 		{
 			auto stage = make_shared<PipelineStage<int, double>>(0, [](int x){ return x * 3.14; });
@@ -31,6 +30,5 @@ namespace CommonTools_NativeTests
 
 			stage->flushAll().wait();
 		}
-
 	};
 }

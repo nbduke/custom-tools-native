@@ -3,9 +3,9 @@
 #include "..\Vector.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
-using namespace CommonTools_Native::Math;
+using namespace Tools::Math;
 
-namespace CommonTools_NativeTests
+namespace Test
 {
 	TEST_CLASS(VectorUnitTests)
 	{

@@ -4,11 +4,14 @@
 #include <string>
 
 
-namespace CommonTools_Native { namespace Math {
+namespace Tools { namespace Math {
 
 	template <unsigned int DIM>
 	class Vector;
 
+	/*
+	 * Represents a point in DIM-dimensional space.
+	 */
 	template <unsigned int DIM>
 	class Point
 	{
