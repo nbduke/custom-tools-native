@@ -12,7 +12,8 @@ namespace Test
 	public:
 		template<unsigned int DIM>
 		void dimensions_WithAnyVector_ReturnsExpectedDimensions(
-			Vector<DIM> vector, unsigned int expectedDimensions)
+			const Vector<DIM>& vector,
+			unsigned int expectedDimensions)
 		{
 			// Arrange
 

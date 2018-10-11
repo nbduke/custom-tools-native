@@ -109,7 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\math\GreatestCommonFactor.h" />
-    <ClInclude Include="..\..\src\math\Point.h" />
     <ClInclude Include="..\..\src\math\Rational.h" />
     <ClInclude Include="..\..\src\math\Vector.h" />
     <ClInclude Include="..\..\src\parallel\FinalPipelineStage.hpp" />
