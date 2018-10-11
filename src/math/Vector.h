@@ -1,7 +1,5 @@
 #pragma once
 
-#include "Point.h"
-
 #include <functional>
 #include <iostream>
 #include <string>
@@ -62,24 +60,6 @@ namespace Tools { namespace Math {
 			}
 		}
 
-		Vector(const Point<DIM>& endPoint)
-			: Vector<DIM>()
-		{
-			for (unsigned int i = 0; i < DIM; ++i)
-			{
-				m_data[i] = endPoint[i];
-			}
-		}
-
-		Vector(const Point<DIM>& startPoint, const Point<DIM>& endPoint)
-			: Vector<DIM>()
-		{
-			for (unsigned int i = 0; i < DIM; ++i)
-			{
-				m_data[i] = endPoint[i] - startPoint[i];
-			}
-		}
-
 		Vector(const Vector<DIM>& other)
 			: Vector<DIM>()
 		{
@@ -125,11 +105,21 @@ namespace Tools { namespace Math {
 			return sqrt(sumSqrs);
 		}
 
-		virtual Vector<DIM> unitVector() const
+		virtual double distanceTo(const Vector<DIM>& other) const
+		{
+			Vector<DIM> delta = *this - other;
+			return delta.magnitude();
+		}
+
+		virtual Vector<DIM> direction() const
 		{
 			double mag = magnitude();
-			Vector<DIM> result;
+			if (mag == 0)
+			{
+				return *this; // if the magnitude is zero, then this is the zero-vector
+			}
 
+			Vector<DIM> result;
 			aggregateComponents(
 				[&mag, &result]
 				(unsigned int index, double value)
@@ -147,12 +137,7 @@ namespace Tools { namespace Math {
 
 		virtual bool isParallelTo(const Vector<DIM>& other) const
 		{
-			return unitVector() == other.unitVector();
-		}
-
-		virtual Point<DIM> getPoint() const
-		{
-			return Point<DIM>(m_data);
+			return direction() == other.direction();
 		}
 
 		virtual std::string toString() const
